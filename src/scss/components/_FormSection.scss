@@ -84,6 +84,9 @@ form{
       a{
         color: $color-accent-footer;
         text-decoration: none;
+        &:focus{
+        outline: none;
+      }
       }
     }
   }

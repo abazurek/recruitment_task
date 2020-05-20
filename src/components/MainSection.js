@@ -2,7 +2,6 @@ import React from 'react';
 import {NavLink} from "react-router-dom";
 
 
-
 import elipse from '../assets/elipse.png';
 
 import project_management from '../assets/icons/project_management.png'
@@ -18,100 +17,114 @@ import crowdfunding from '../assets/icons/crowdfunding.png'
 import insurance from '../assets/icons/insurance.png'
 import marketing from '../assets/icons/marketing.png'
 
-const imgTable=[];
+const imgTable = [];
 
 imgTable.push({
-    img:project_management,
-    string:'project_management',
-    span:"Zarządzanie projektami"
+    img: project_management,
+    string: 'project_management',
+    span: "Zarządzanie projektami"
 
 });
 imgTable.push({
-    img:grants,
-    string:'grants',
-    span:"Dotacje i granty międzynarodowe"
+    img: grants,
+    string: 'grants',
+    span: "Dotacje i granty międzynarodowe"
 
 });
 imgTable.push({
-    img:international_accouting,
-    string:'international_accouting',
-    span:"Międzynarodowa księgowość, kadry i podatki"
+    img: international_accouting,
+    string: 'international_accouting',
+    span: "Międzynarodowa księgowość, kadry i podatki"
 
 });
 imgTable.push({
-    img:international_law,
-    string:'international_law',
-    span:"Prawo międzynarodowe"
-
-});imgTable.push({
-    img:trade_finance,
-    string:'trade_finance',
-    span:"Finansowanie handlu międzynarodowego"
-
-});imgTable.push({
-    img:attracting_investors,
-    string:'attracting_investors',
-    span:"Pozyskiwanie inwestorów (M&A)"
-
-});imgTable.push({
-    img:immovables,
-    string:'immovables',
-    span:"Nieruchomości"
-
-});imgTable.push({
-    img:commercialization,
-    string:'commercialization',
-    span:"Komercjalizacja własności intelektualnej"
-
-});imgTable.push({
-    img:increasing_productivity,
-    string:'increasing_productivity',
-    span:"Podnoszenie produktywności"
-
-});imgTable.push({
-    img:crowdfunding,
-    string:'crowdfunding',
-    span:"Crowdfunding"
-
-});imgTable.push({
-    img:insurance,
-    string:'insurance',
-    span:"Ubezpieczenia międzynarodowe"
+    img: international_law,
+    string: 'international_law',
+    span: "Prawo międzynarodowe"
 
 });
 imgTable.push({
-    img:marketing,
-    string:'marketing',
-    span:"Marketing 360"
+    img: trade_finance,
+    string: 'trade_finance',
+    span: "Finansowanie handlu międzynarodowego"
 
 });
+imgTable.push({
+    img: attracting_investors,
+    string: 'attracting_investors',
+    span: "Pozyskiwanie inwestorów (M&A)"
 
+});
+imgTable.push({
+    img: immovables,
+    string: 'immovables',
+    span: "Nieruchomości"
+
+});
+imgTable.push({
+    img: commercialization,
+    string: 'commercialization',
+    span: "Komercjalizacja własności intelektualnej"
+
+});
+imgTable.push({
+    img: increasing_productivity,
+    string: 'increasing_productivity',
+    span: "Podnoszenie produktywności"
+
+});
+imgTable.push({
+    img: crowdfunding,
+    string: 'crowdfunding',
+    span: "Crowdfunding"
+
+});
+imgTable.push({
+    img: insurance,
+    string: 'insurance',
+    span: "Ubezpieczenia międzynarodowe"
+
+});
+imgTable.push({
+    img: marketing,
+    string: 'marketing',
+    span: "Marketing 360"
+
+});
 
 
 function MainSection() {
 
-    return(
+    return (
         <section className='main-section'>
             <div className='container'>
                 <div className='text-box'>
                     <p className='title'>Obszary naszych kompetencji</p>
-                    <p className='subtitle'>Pomagamy uczyć się na błędach innych. Wspieramy i rekomendujemy wartościowe rozwiązania biznesowe</p>
+                    <p className='subtitle'>Pomagamy uczyć się na błędach innych. Wspieramy i rekomendujemy wartościowe
+                        rozwiązania biznesowe</p>
                 </div>
-                <div>
-                    <img className='elipse-image' src={elipse} alt='elipse'/>
+                <div className='diagam-box'>
+                    <div className='elipse-box'>
+                        <img className='elipse-image' src={elipse} alt='elipse'/>
+                    </div>
+                    <ul>
+
+                        {imgTable.map((item) => (
+                            <div>
+                                <li className='single-box-icon' key={imgTable.indexOf(item)}>
+                                    <NavLink className='naw-link' to={`/${item.string}`}>
+                                        <div className='img-box'>
+                                            <img src={item.img} alt={item.string}/>
+                                        </div>
+
+                                        <p>{item.span}</p>
+                                    </NavLink>
+
+                                </li>
+                            </div>
+                        ))}
+                    </ul>
                 </div>
-                <ul>
-
-                    {imgTable.map((item)=>(
-                        <li className='single-box-icon' key={imgTable.indexOf(item)}>
-                            <NavLink className='naw-link' to={`/${item.string}`}>
-                                <img src={item.img} alt={item.string}/>
-                                <p>{item.span}</p>
-                            </NavLink>
-
-                        </li>
-                    ))}
-                </ul>
 
             </div>
         </section>

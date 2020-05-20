@@ -99,8 +99,7 @@ export default function FormSection() {
             </div>
             <label className='checkbox-label'>
                 <input required type='checkbox'/>
-                <span>Zapoznałem(-łam) się z
-                <a href='https://justidea.agency/pl/polityka-prywatnosci/' target='_blank' rel='noopener noreferrer'>Polityką prywatności </a>
+                <span>Zapoznałem(-łam) się z <a href='https://justidea.agency/pl/polityka-prywatnosci/' target='_blank' rel='noopener noreferrer'>Polityką prywatności </a>
                 oraz z <a href='https://justidea.agency/pl/' target='_blank' rel='noopener noreferrer'> Zastrzeżeniami prawnymi</a></span>
             </label>
 
