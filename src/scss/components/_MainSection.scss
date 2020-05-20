@@ -1,38 +1,95 @@
-.main-section{
-  flex:2;
+.main-section {
+  flex: 2;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  .text-box{
+
+  .text-box {
     margin-top: 4.1875em;
-    .subtitle{
-      font-size:1em ;
+
+    .subtitle {
+      font-size: 1em;
       color: $color-accent-font;
     }
-    .title{
+
+    .title {
       font-size: 2.125em;
       margin-bottom: 1em;
     }
+
   }
 
-  .elipse-image{
-    max-width: 50vw;
-    height: auto;
-    margin-top: 2em;
-  }
-
-  .single-box-icon{
-    margin: 2em auto;
-    a{
-      &:hover{
-        cursor: pointer;
-      }
-      p{
-        font-size: 1em;
-        color: $color-base-font;
-      }
+  .diagam-box{
+    position: relative;
+    @media #{$media-desktop} {
+      margin-top: 3.75em;
     }
   }
+  .elipse-box{
+    z-index: -1;
+    .elipse-image {
+      max-width: 50vw;
+      height: auto;
+      margin-top: 2em;
+
+    }
+  }
+
+
+  ul {
+    .single-box-icon {
+      margin: 2em auto;
+
+      a {
+        &:hover {
+          cursor: pointer;
+        }
+
+        p {
+          font-size: 1em;
+          color: $color-base-font;
+        }
+      }
+    }
+
+
+    @media #{$media-desktop} {
+      @include circle-diagram(37.5em, 3em, 12);
+      position: absolute;
+      top: -120px;
+      left: 213px;
+      z-index: 1;
+      margin: 5em auto 0;
+      border:1px solid $color-circle-border;
+      .single-box-icon{
+        margin: 0;
+      }
+      .img-box {
+        border-radius: 50%;
+        background: $color-accent-elipse;
+        position: relative;
+        img {
+          display: block;
+          max-width: 100%;
+          border-radius: 50%;
+          border: solid 1px $color-circle-border;
+
+        }
+      }
+      li{
+        p{
+          position: absolute;
+        }
+        &:first-child{
+          p{
+            top:0;
+          }
+        }
+      }
+
+    }
+  }
+
   //margin-bottom: 4.375em;
 }

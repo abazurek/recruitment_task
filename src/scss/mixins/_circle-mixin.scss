@@ -1,0 +1,32 @@
+@mixin circle-diagram($size, $item-size, $numOfItems) {
+  position: relative;
+  width:  $size;
+  height: $size;
+  padding: 0;
+  border-radius: 50%;
+
+  > * {
+    display: block;
+    position: absolute;
+    top:  46.5%;
+    left: 46%;
+    width:  $item-size;
+    height: $item-size;
+    margin: -($item-size / 2);
+
+    $angle: (360 / $numOfItems);
+    $rot: 0;
+
+    @for $i from 1 through $numOfItems {
+      &:nth-of-type(#{$i}) {
+        transform:
+                rotate($rot * 1deg)
+                translate($size / 2)
+                rotate($rot * -1deg);
+      }
+
+      $rot: $rot + $angle;
+    }
+  }
+
+}
