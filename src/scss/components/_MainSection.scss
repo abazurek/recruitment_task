@@ -1,0 +1,38 @@
+.main-section{
+  flex:2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .text-box{
+    margin-top: 4.1875em;
+    .subtitle{
+      font-size:1em ;
+      color: $color-accent-font;
+    }
+    .title{
+      font-size: 2.125em;
+      margin-bottom: 1em;
+    }
+  }
+
+  .elipse-image{
+    max-width: 50vw;
+    height: auto;
+    margin-top: 2em;
+  }
+
+  .single-box-icon{
+    margin: 2em auto;
+    a{
+      &:hover{
+        cursor: pointer;
+      }
+      p{
+        font-size: 1em;
+        color: $color-base-font;
+      }
+    }
+  }
+  margin-bottom: 4.375em;
+}

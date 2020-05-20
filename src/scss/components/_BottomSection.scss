@@ -1,0 +1,23 @@
+.bottom-section{
+  flex: 1;
+  background-image: url("../../assets/footer-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 3.4375em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .text-section{
+    margin-top:10em ;
+    color: white;
+    text-align: center;
+    .contact{
+      font-size: 2.1875em;
+      margin-bottom: 0.77em;
+    }
+    .number{
+      font-size: 0.875em;
+    }
+  }
+
+}
