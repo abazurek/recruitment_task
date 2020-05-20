@@ -23,13 +23,13 @@
   .diagam-box{
     position: relative;
     @media #{$media-desktop} {
-      margin-top: 3.75em;
+      margin-top: 5.75em;
+      padding-top: 5em;
     }
   }
   .elipse-box{
     @media #{$media-desktop}{
       z-index: -1;
-
     }
 
     .elipse-image {
@@ -61,7 +61,7 @@
     @media #{$media-desktop} {
       @include circle-diagram(37.5em, 3em, 12);
       position: absolute;
-      top: -22%;
+      top: -6%;
       left:25%;
       z-index: 1;
       margin: 5em auto 0;
