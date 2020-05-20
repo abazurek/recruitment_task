@@ -109,8 +109,8 @@ function MainSection() {
                     </div>
                     <ul>
                         {imgTable.map((item) => (
-                            <div>
-                                <li className='single-box-icon' key={imgTable.indexOf(item)}>
+                            <div key={imgTable.indexOf(item)}>
+                                <li className='single-box-icon'>
                                     <NavLink className='naw-link' to={`/${item.string}`}>
                                         <div className='img-box'>
                                             <img src={item.img} alt={item.string}/>

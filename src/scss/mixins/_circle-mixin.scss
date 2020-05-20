@@ -6,6 +6,7 @@
     }
   }
 }
+
 @mixin transformLeft($num,$transform,$size ){
   &:nth-child(#{$num}){
     p{
@@ -49,6 +50,7 @@
   img{
     width:  $item-size;
     height: $item-size;
+
   }
 
 
