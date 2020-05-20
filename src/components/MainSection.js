@@ -108,7 +108,6 @@ function MainSection() {
                         <img className='elipse-image' src={elipse} alt='elipse'/>
                     </div>
                     <ul>
-
                         {imgTable.map((item) => (
                             <div>
                                 <li className='single-box-icon' key={imgTable.indexOf(item)}>
