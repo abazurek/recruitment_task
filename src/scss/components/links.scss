@@ -1,0 +1,15 @@
+.links-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2em;
+  h1{
+    font-size: 2em;
+  }
+  .liniks-button{
+    @include button(2em, $color-accent-footer,$color-accent-footer-font);
+    a{
+      color: white;
+    }
+  }
+}
