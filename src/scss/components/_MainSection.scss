@@ -27,7 +27,11 @@
     }
   }
   .elipse-box{
-    z-index: -1;
+    @media #{$media-desktop}{
+      z-index: -1;
+
+    }
+
     .elipse-image {
       max-width: 50vw;
       height: auto;
@@ -57,8 +61,8 @@
     @media #{$media-desktop} {
       @include circle-diagram(37.5em, 3em, 12);
       position: absolute;
-      top: -120px;
-      left: 213px;
+      top: -22%;
+      left:25%;
       z-index: 1;
       margin: 5em auto 0;
       border:1px solid $color-circle-border;
@@ -77,16 +81,7 @@
 
         }
       }
-      li{
-        p{
-          position: absolute;
-        }
-        &:first-child{
-          p{
-            top:0;
-          }
-        }
-      }
+
 
     }
   }

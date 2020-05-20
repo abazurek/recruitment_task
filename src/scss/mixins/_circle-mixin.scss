@@ -1,3 +1,20 @@
+@mixin transformRight($num,$transform,$size ){
+  &:nth-child(#{$num}){
+    p{
+      right: $transform*$size;
+      top: $size/2;
+    }
+  }
+}
+@mixin transformLeft($num,$transform,$size ){
+  &:nth-child(#{$num}){
+    p{
+      left: $transform*$size;
+      top: $size/2;
+    }
+  }
+}
+
 @mixin circle-diagram($size, $item-size, $numOfItems) {
   position: relative;
   width:  $size;
@@ -8,14 +25,14 @@
   > * {
     display: block;
     position: absolute;
-    top:  46.5%;
-    left: 46%;
+    top:  50%;
+    left: 50%;
     width:  $item-size;
     height: $item-size;
     margin: -($item-size / 2);
 
     $angle: (360 / $numOfItems);
-    $rot: 0;
+    $rot: -90;
 
     @for $i from 1 through $numOfItems {
       &:nth-of-type(#{$i}) {
@@ -29,4 +46,43 @@
     }
   }
 
+  img{
+    width:  $item-size;
+    height: $item-size;
+  }
+
+
+  div{
+    p{
+      position: absolute;
+    }
+    &:first-child{
+      display: flex;
+      justify-content: center;
+      p{
+        top:-2em;
+        right: -0.5*$item-size;
+      }
+    }
+
+    @include transformRight(2,-5.5,$item-size);
+    @include transformRight(3,-7,$item-size);
+    @include transformRight(4,-4,$item-size);
+    @include transformRight(5,-6.5,$item-size);
+    @include transformRight(6,-5.5, $item-size);
+
+    &:nth-child(7){
+      p{
+        margin-top:1em;
+        left: -0.5*$item-size;
+      }
+    }
+    @include transformLeft(8,-6.5,$item-size);
+    @include transformLeft(9,-4.8,$item-size);
+    @include transformLeft(10,-2.5,$item-size);
+    @include transformLeft(11,-5.2,$item-size);
+    @include transformLeft(12,-2.5,$item-size);
+
+  }
 }
+
